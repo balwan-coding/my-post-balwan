@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+}
+
+/* .hadFod {
+  width: 100%;
+} */
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.deletIcon {
+  cursor: pointer;
+}
+
+.close {
+
+  left: -180px;
+
+}
+
+.open {
+  left: 0;
+}
+
+.closeBtn {
+  background-color: none;
+  border: none;
+}
+
+.closeIcone {
+  cursor: pointer;
+}
+
+.myFooter {
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.menuBtn {
+  cursor: pointer;
+}
