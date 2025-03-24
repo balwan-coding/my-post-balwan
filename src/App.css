@@ -2,9 +2,7 @@
   display: flex;
 }
 
-/* .hadFod {
-  width: 100%;
-} */
+
 
 .sidebar {
   height: 100vh;
@@ -18,9 +16,7 @@
 }
 
 .close {
-
   left: -180px;
-
 }
 
 .open {
@@ -45,4 +41,8 @@
 
 .menuBtn {
   cursor: pointer;
+}
+
+.header {
+  width: 100vw;
 }

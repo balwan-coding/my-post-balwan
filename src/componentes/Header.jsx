@@ -3,7 +3,7 @@ import { IoMdMenu } from "react-icons/io";
 
 function Header({ setIsopen, setSeletedTap, seletedTap }) {
   return (
-    <header className="header p-3 text-bg-dark">
+    <header className="header  text-bg-dark">
       <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
