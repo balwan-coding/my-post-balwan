@@ -6,11 +6,11 @@ function Header({ setIsopen, setSeletedTap, seletedTap }) {
     <header className="header text-bg-dark">
       <div className="container">
         <div className="flex-wrap d-flex align-items-center justify-content-center justify-content-lg-start">
-          <ul className="mb-2 nav col-12 col-lg-auto me-lg-auto justify-content-center mb-md-0">
+          <ul className="mb-2 nav col-12 col-lg-auto mb-md-0">
             <li onClick={() => setIsopen("open")}>
               <IoMdMenu className="mt-2 fs-1 pointer menu" />
             </li>
-            <li>
+            <li className="headerItem">
               <a
                 className="px-2 text-white nav-link pointer"
                 onClick={() => setSeletedTap("Home")}
@@ -18,7 +18,7 @@ function Header({ setIsopen, setSeletedTap, seletedTap }) {
                 Home
               </a>
             </li>
-            <li>
+            <li className="headerItem">
               <a
                 onClick={() => setSeletedTap("Create Post")}
                 href="#"
@@ -28,7 +28,7 @@ function Header({ setIsopen, setSeletedTap, seletedTap }) {
               </a>
             </li>
 
-            <li>
+            <li className="headerItem">
               <a href="#" className="px-2 text-white nav-link">
                 About
               </a>
