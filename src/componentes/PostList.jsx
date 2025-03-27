@@ -5,27 +5,10 @@ import Msg from "./Msg";
 import Loding from "./Loding";
 
 function PostList() {
-  const { postList, addInitialPosts } = useContext(PostsListsItem);
-  const [fetching, setFetching] = useState(false);
+  const { fetching, postList } = useContext(PostsListsItem);
 
-  useEffect(() => {
-    setFetching(true);
-
-    const controller = new AbortController();
-    const signal = controller.signal;
-    fetch("https://dummyjson.com/posts")
-      .then((res) => res.json())
-      .then((data) => {
-        addInitialPosts(data.posts);
-        setFetching(false);
-      });
-
-    return () => {
-      controller.abort();
-    };
-  }, []);
   return (
-    <div className="d-flex flex-wrap align-items-center justify-content-center">
+    <div className="flex-wrap d-flex align-items-center justify-content-center">
       {fetching && <Loding />}
       {!fetching && postList.length === 0 && <Msg />}
       {!fetching && postList.map((post) => <Post key={post.id} post={post} />)}

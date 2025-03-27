@@ -16,12 +16,27 @@ function CeratePost() {
     const userBody = userBodyElement.current.value;
     const views = userReactionsElement.current.value;
     const userTags = userTagsElement.current.value.split(" ");
-    addPost(userId, userTitle, userBody, views, userTags);
+
     userIdElement.current.value = "";
     userTitleElement.current.value = "";
     userBodyElement.current.value = "";
     userReactionsElement.current.value = "";
     userTagsElement.current.value = "";
+
+    fetch("https://dummyjson.com/posts/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        title: userTitle,
+        body: userBody,
+        views: views,
+        reactions: views,
+        userId: userId,
+        tags: userTags,
+      }),
+    })
+      .then((res) => res.json())
+      .then((post) => addPost(post));
   };
   return (
     <form className="m-3" onSubmit={handleSubmit}>

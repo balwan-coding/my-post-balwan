@@ -1,5 +1,13 @@
+body {
+  overflow: auto;
+}
+
 .main {
   display: flex;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 
@@ -45,4 +53,14 @@
 
 .header {
   width: 100vw;
+}
+
+.menu {
+  display: block;
+}
+
+@media(min-width : 700px) {
+  .menu {
+    display: none;
+  }
 }

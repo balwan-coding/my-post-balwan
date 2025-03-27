@@ -4,10 +4,10 @@ import { PostList } from "../store/Post-list-store";
 function Post({ post }) {
   const { deletePost } = useContext(PostList);
   return (
-    <div className=" card m-2" style={{ maxWidth: "45rem" }}>
+    <div className="m-2 card" style={{ maxWidth: "39rem" }}>
       <span
         onClick={() => deletePost(post.id)}
-        className="position-absolute top-0 deletIcon start-100 translate-middle badge rounded-pill bg-danger"
+        className="top-0 position-absolute deletIcon start-100 translate-middle badge rounded-pill bg-danger"
       >
         <MdDeleteForever />
         <span className="visually-hidden">unread messages</span>
@@ -17,13 +17,13 @@ function Post({ post }) {
         <p className="card-text">{post.body}</p>
 
         {post.tags.map((tag) => (
-          <span key={tag} className="badge text-bg-primary m-1">
+          <span key={tag} className="m-1 badge text-bg-primary">
             #{tag}
           </span>
         ))}
       </div>
       <div className="alert alert-info">
-        <span className="badge bg-success mx-2">👍 {post.reactions.likes}</span>
+        <span className="mx-2 badge bg-success">👍 {post.reactions.likes}</span>
         <span className="badge bg-danger">
           👎 {post.reactions.dislikes}
         </span>{" "}
