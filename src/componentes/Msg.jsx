@@ -1,6 +1,6 @@
 import React from "react";
 
-function Msg({ onClickDataFind }) {
+function Msg() {
   return (
     <div className="bg-dark text-secondary px-4 py-5 text-center">
       <div className="py-5">
