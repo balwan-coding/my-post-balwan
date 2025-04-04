@@ -1,5 +1,6 @@
 import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function Siderbar({ seletedTap, setSeletedTap, isOpen, setIsopen }) {
   return (
@@ -21,8 +22,8 @@ function Siderbar({ seletedTap, setSeletedTap, isOpen, setIsopen }) {
       <hr />
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item" onClick={() => setSeletedTap("Home")}>
-          <a
-            href="#"
+          <Link
+            to="/"
             className={`nav-link text-white ${
               seletedTap === "Home" && `active`
             }`}
@@ -32,11 +33,11 @@ function Siderbar({ seletedTap, setSeletedTap, isOpen, setIsopen }) {
               <use xlinkHref="#home"></use>
             </svg>
             Home
-          </a>
+          </Link>
         </li>
         <li onClick={() => setSeletedTap("Create Post")}>
-          <a
-            href="#"
+          <Link
+            to="/creactePoste"
             className={`nav-link text-white ${
               seletedTap === "Create Post" && `active`
             }`}
@@ -45,7 +46,7 @@ function Siderbar({ seletedTap, setSeletedTap, isOpen, setIsopen }) {
               <use xlinkHref="#speedometer2"></use>
             </svg>
             Create Post
-          </a>
+          </Link>
         </li>
       </ul>
       <hr />

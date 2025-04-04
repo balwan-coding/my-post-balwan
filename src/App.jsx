@@ -6,6 +6,7 @@ import CeratePost from "./componentes/CeratePost";
 import PostList from "./componentes/PostList";
 import { useState } from "react";
 import PostListProvider from "./store/Post-list-store";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [seletedTap, setSeletedTap] = useState("Home");
@@ -21,8 +22,10 @@ function App() {
         />
         <div className="hadFod">
           <Header setIsopen={setIsopen} setSeletedTap={setSeletedTap} />
-          {seletedTap === "Home" ? <PostList /> : <CeratePost />}
-
+          <Routes>
+            <Route index element={<PostList />} />
+            <Route path="/creactePoste" element={<CeratePost />} />
+          </Routes>
           <Footer />
         </div>
       </div>

@@ -1,7 +1,8 @@
 import React from "react";
 import { IoMdMenu } from "react-icons/io";
+import { Link } from "react-router-dom";
 
-function Header({ setIsopen, setSeletedTap, seletedTap }) {
+function Header({ setIsopen }) {
   return (
     <header className="header text-bg-dark">
       <div className="container">
@@ -11,21 +12,17 @@ function Header({ setIsopen, setSeletedTap, seletedTap }) {
               <IoMdMenu className="mt-2 fs-1 pointer menu" />
             </li>
             <li className="headerItem">
-              <a
-                className="px-2 text-white nav-link pointer"
-                onClick={() => setSeletedTap("Home")}
-              >
+              <Link to="/" className="px-2 text-white nav-link pointer">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="headerItem">
-              <a
-                onClick={() => setSeletedTap("Create Post")}
-                href="#"
+              <Link
+                to="/creactePoste"
                 className="px-2 text-white nav-link pointer"
               >
                 Create Post
-              </a>
+              </Link>
             </li>
 
             <li className="headerItem">

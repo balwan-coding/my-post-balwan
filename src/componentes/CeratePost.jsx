@@ -1,7 +1,9 @@
 import React, { useContext, useRef } from "react";
 import { PostList } from "../store/Post-list-store";
+import { useNavigate } from "react-router-dom";
 
 function CeratePost() {
+  const navigate = useNavigate();
   const { addPost } = useContext(PostList);
   const userIdElement = useRef();
   const userTitleElement = useRef();
@@ -17,26 +19,30 @@ function CeratePost() {
     const views = userReactionsElement.current.value;
     const userTags = userTagsElement.current.value.split(" ");
 
-    userIdElement.current.value = "";
-    userTitleElement.current.value = "";
-    userBodyElement.current.value = "";
-    userReactionsElement.current.value = "";
-    userTagsElement.current.value = "";
-
-    fetch("https://dummyjson.com/posts/add", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        title: userTitle,
-        body: userBody,
-        views: views,
-        reactions: views,
-        userId: userId,
-        tags: userTags,
-      }),
-    })
-      .then((res) => res.json())
-      .then((post) => addPost(post));
+    if (
+      userIdElement.current.value === "" &&
+      userTitleElement.current.value === "" &&
+      userBodyElement.current.value === "" &&
+      userReactionsElement.current.value === "" &&
+      userTagsElement.current.value === ""
+    ) {
+      alert("Plaese fill aal box");
+    } else {
+      fetch("https://dummyjson.com/posts/add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title: userTitle,
+          body: userBody,
+          views: views,
+          reactions: views,
+          userId: userId,
+          tags: userTags,
+        }),
+      })
+        .then((res) => res.json())
+        .then((post) => addPost(post), navigate("/"));
+    }
   };
   return (
     <form className="m-3" onSubmit={handleSubmit}>
