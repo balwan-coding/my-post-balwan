@@ -1,8 +1,4 @@
-body {
-  overflow: auto;
-}
-
-.main {
+.my-main {
   display: flex;
 }
 
@@ -10,7 +6,12 @@ body {
   cursor: pointer;
 }
 
-
+.header {
+  width: 99vw;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
 
 .sidebar {
   height: 100vh;
@@ -51,9 +52,6 @@ body {
   cursor: pointer;
 }
 
-.header {
-  width: 100vw;
-}
 
 .menu {
   display: block;

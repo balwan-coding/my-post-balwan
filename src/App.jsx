@@ -13,7 +13,7 @@ function App() {
   const [isOpen, setIsopen] = useState("close");
   return (
     <PostListProvider>
-      <div className="main">
+      <div className="my-main">
         <Siderbar
           seletedTap={seletedTap}
           isOpen={isOpen}
@@ -21,7 +21,7 @@ function App() {
           setSeletedTap={setSeletedTap}
         />
         <div className="hadFod">
-          <Header setIsopen={setIsopen} setSeletedTap={setSeletedTap} />
+          <Header setIsopen={setIsopen} />
           <Routes>
             <Route index element={<PostList />} />
             <Route path="/creactePoste" element={<CeratePost />} />
