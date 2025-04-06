@@ -10,7 +10,7 @@
   width: 99vw;
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 998;
 }
 
 .sidebar {
@@ -56,6 +56,10 @@
 .menu {
   display: block;
   float: right;
+}
+
+.createPost {
+  width: 90vw;
 }
 
 /* .headerItem {

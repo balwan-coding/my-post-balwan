@@ -8,7 +8,7 @@ function PostList() {
   const { fetching, postList } = useContext(PostsListsItem);
 
   return (
-    <div className="container  my-4">
+    <center className="container   my-4">
       {fetching && <Loding />}
       {!fetching && postList.length === 0 && <Msg />}
       {!fetching && (
@@ -23,7 +23,7 @@ function PostList() {
           ))}
         </div>
       )}
-    </div>
+    </center>
   );
 }
 

@@ -45,7 +45,7 @@ function CeratePost() {
     }
   };
   return (
-    <form className="m-3" onSubmit={handleSubmit}>
+    <form className="m-3 createPost" onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="userId" className="form-label">
           User Id
