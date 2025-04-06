@@ -66,6 +66,10 @@
   display: block;
 } */
 
+.loding-spin {
+  margin-top: 10%;
+}
+
 @media(min-width : 700px) {
   .menu {
     display: none;

@@ -8,8 +8,8 @@ function PostList() {
   const { fetching, postList } = useContext(PostsListsItem);
 
   return (
-    <center className="container   my-4">
-      {fetching && <Loding />}
+    <center className="container my-4">
+      {!fetching && <Loding />}
       {!fetching && postList.length === 0 && <Msg />}
       {!fetching && (
         <div className="row">
