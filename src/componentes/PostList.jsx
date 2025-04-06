@@ -9,7 +9,7 @@ function PostList() {
 
   return (
     <center className="container my-4">
-      {!fetching && <Loding />}
+      {fetching && <Loding />}
       {!fetching && postList.length === 0 && <Msg />}
       {!fetching && (
         <div className="row">
