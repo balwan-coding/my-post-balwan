@@ -24,12 +24,6 @@ function Header({ setIsopen }) {
                 Create Post
               </Link>
             </li>
-
-            <li className="headerItem">
-              <a href="#" className="px-2 text-white nav-link">
-                About
-              </a>
-            </li>
           </ul>
         </div>
       </div>
