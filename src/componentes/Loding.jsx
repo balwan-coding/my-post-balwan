@@ -1,8 +1,10 @@
 import React from "react";
-
 function Loding() {
   return (
-    <div className="d-flex loding-spin justify-content-center">
+    <div
+      className="d-flex justify-content-center align-items-center"
+      style={{ minHeight: "400px", width: "100vw" }}
+    >
       <div
         className="spinner-border text-primary"
         style={{ width: "5rem", height: "5rem" }}
