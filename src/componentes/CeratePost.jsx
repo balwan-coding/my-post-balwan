@@ -55,7 +55,7 @@ function CeratePost() {
           type="text"
           className="form-control"
           id="userId"
-          placeholder="Enter your user id..."
+          placeholder="Enter  your user id only 1 - 150"
         />
       </div>
       <div className="mb-3">
